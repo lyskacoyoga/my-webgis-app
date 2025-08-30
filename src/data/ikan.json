@@ -1,0 +1,38 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "nama": "Pelabuhan Ikan Paotere",
+        "jenis_ikan": "Tongkol, Cakalang"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [119.4182, -5.1189]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "nama": "Pusat Grosir Ikan",
+        "jenis_ikan": "Kerapu, Kakap"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [119.4230, -5.1275]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "nama": "Tempat Budidaya Rumput Laut",
+        "jenis_ikan": "Rumput Laut"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [119.4105, -5.1500]
+      }
+    }
+  ]
+}
