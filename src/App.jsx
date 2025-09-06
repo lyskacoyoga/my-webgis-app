@@ -16,13 +16,13 @@ export default function App() {
   // Navigation menu items
   const menuItems = [
     { name: 'Dashboard', icon: Home, page: 'dashboard' },
-    { name: 'Map Interface', icon: Map, page: 'map' },
-    { name: 'Price Prediction', icon: TrendingUp, page: 'pricePrediction' },
-    { name: 'Financial Inclusion', icon: DollarSign, page: 'dashboard' }, // Part of dashboard
-    { name: 'Profile Management', icon: User, page: 'profile' },
-    { name: 'Advanced Analytics', icon: BarChart2, page: 'analytics' },
-    { name: 'Data Input', icon: PlusCircle, page: 'dataInput' },
-    { name: 'Education & Resources', icon: BookOpen, page: 'education' },
+    { name: 'Mapping', icon: Map, page: 'map' },
+    { name: 'Prediksi Harga', icon: TrendingUp, page: 'pricePrediction' },
+    { name: 'Inklusi Keuangan', icon: DollarSign, page: 'dashboard' }, // Part of dashboard
+    { name: 'Pengelolaan Profil', icon: User, page: 'profile' },
+    { name: 'Analsiis Lanjutan', icon: BarChart2, page: 'analytics' },
+    { name: 'Masukan Data', icon: PlusCircle, page: 'dataInput' },
+    { name: 'Pendidikan & Sumber Daya', icon: BookOpen, page: 'education' },
   ];
 
   return (
@@ -111,8 +111,8 @@ export default function App() {
 const Dashboard = ({ navigate }) => {
   // Mock data for statistics
   const stats = [
-    { label: 'Number of Fishers', value: '15,200', icon: User, color: 'text-blue-500', bgColor: 'bg-blue-50' },
-    { label: 'Total Fish Production (Tonnes)', value: '3,850', icon: Fish, color: 'text-green-500', bgColor: 'bg-green-50' },
+    { label: 'Jumlah Nelayan', value: '15,200', icon: User, color: 'text-blue-500', bgColor: 'bg-blue-50' },
+    { label: 'Produksi Ikan Total (Ton)', value: '3,850', icon: Fish, color: 'text-green-500', bgColor: 'bg-green-50' },
   ];
 
   const qrisAdoptionRate = 78;
@@ -120,7 +120,7 @@ const Dashboard = ({ navigate }) => {
 
   return (
     <div className="p-4 bg-white rounded-xl shadow-lg">
-      <h2 className="text-3xl font-bold text-gray-800 mb-6">Main Dashboard</h2>
+      <h2 className="text-3xl font-bold text-gray-800 mb-6">Dashboard</h2>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {/* Left: Interactive Map Placeholder */}
@@ -153,12 +153,12 @@ const Dashboard = ({ navigate }) => {
           {/* Financial Inclusion Metrics Card (Step 4) */}
           <div className="bg-white rounded-xl shadow-md p-6 border-t-4 border-green-500">
             <h3 className="text-xl font-bold text-gray-800 mb-4 flex items-center">
-              <DollarSign className="mr-2 text-green-600" size={24} /> Financial Inclusion
+              <DollarSign className="mr-2 text-green-600" size={24} /> Inklusi Keuangan
             </h3>
             <div className="space-y-4">
               <div>
                 <div className="flex justify-between text-sm font-medium text-gray-700 mb-1">
-                  <span>QRIS Adoption Rate</span>
+                  <span>Tingkat Adopsi QRIS</span>
                   <span>{qrisAdoptionRate}%</span>
                 </div>
                 <div className="w-full bg-gray-200 rounded-full h-2.5">
@@ -170,7 +170,7 @@ const Dashboard = ({ navigate }) => {
               </div>
               <div>
                 <div className="flex justify-between text-sm font-medium text-gray-700 mb-1">
-                  <span>Fishers Using Banking Services</span>
+                  <span>Nelayan yang Menggunakan Layanan Perbankan</span>
                   <span>{bankingServicesRate}%</span>
                 </div>
                 <div className="w-full bg-gray-200 rounded-full h-2.5">
@@ -182,7 +182,7 @@ const Dashboard = ({ navigate }) => {
               </div>
             </div>
             <button className="mt-6 w-full py-3 bg-green-600 text-white font-semibold rounded-full shadow-md hover:bg-green-700 transition duration-300 transform hover:scale-105">
-              Apply for Business Loan
+              Ajukan Pinjaman Usaha
             </button>
           </div>
         </div>
@@ -223,19 +223,19 @@ const MapInterface = () => {
           <div className="space-y-3">
             <label className="flex items-center text-gray-700 font-medium cursor-pointer">
               <input type="checkbox" className="form-checkbox h-5 w-5 text-blue-600 rounded" defaultChecked />
-              <span className="ml-2">Fishermen Locations</span>
+              <span className="ml-2">Lokasi Nelayan</span>
             </label>
             <label className="flex items-center text-gray-700 font-medium cursor-pointer">
               <input type="checkbox" className="form-checkbox h-5 w-5 text-blue-600 rounded" defaultChecked />
-              <span className="ml-2">Fish Auction Sites (TPIs)</span>
+              <span className="ml-2">Lokasi Lelang Ikan (TPI)</span>
             </label>
             <label className="flex items-center text-gray-700 font-medium cursor-pointer">
               <input type="checkbox" className="form-checkbox h-5 w-5 text-blue-600 rounded" defaultChecked />
-              <span className="ml-2">Processing Centers</span>
+              <span className="ml-2">Pusat Pengelolaan</span>
             </label>
             <label className="flex items-center text-gray-700 font-medium cursor-pointer">
               <input type="checkbox" className="form-checkbox h-5 w-5 text-blue-600 rounded" />
-              <span className="ml-2">Coastal Zones</span>
+              <span className="ml-2">Zona Pesisir</span>
             </label>
           </div>
         </div>
@@ -248,34 +248,34 @@ const MapInterface = () => {
 const PricePrediction = () => {
   // Mock data for price prediction chart
   const historicalData = [
-    { name: 'Week 1', price: 25000 },
-    { name: 'Week 2', price: 26500 },
-    { name: 'Week 3', price: 27000 },
-    { name: 'Week 4', price: 28000 },
-    { name: 'Week 5', price: 27500 },
-    { name: 'Week 6', price: 29000 },
+    { name: 'Minggu 1', price: 25000 },
+    { name: 'Minggu 2', price: 26500 },
+    { name: 'Minggu 3', price: 27000 },
+    { name: 'Minggu 4', price: 28000 },
+    { name: 'Minggu 5', price: 27500 },
+    { name: 'minggu 6', price: 29000 },
   ];
   const forecastedData = [
-    { name: 'Week 6', price: 29000 }, // Connects historical to forecast
-    { name: 'Week 7', price: 30000 },
-    { name: 'Week 8', price: 31500 },
-    { name: 'Week 9', price: 31000 },
-    { name: 'Week 10', price: 32500 },
+    { name: 'Minggu 6', price: 29000 }, // Connects historical to forecast
+    { name: 'Minggu 7', price: 30000 },
+    { name: 'Minggu 8', price: 31500 },
+    { name: 'Minggu 9', price: 31000 },
+    { name: 'Minggu 10', price: 32500 },
   ];
 
-  const fishTypes = ['Skipjack', 'Tuna', 'Mackerel', 'Snapper'];
-  const timeRanges = ['Weekly', 'Monthly'];
+  const fishTypes = ['Ikan Katombo Karisa (Grade A)', 'Ikan Boronang Besar (Grade A)', 'Ikan Rambeng Kecil (Grade A)', 'Ikan Malaja (Grade A)'];
+  const timeRanges = ['Mingguan', 'Bulanan'];
 
-  const [selectedFish, setSelectedFish] = useState('Skipjack');
-  const [selectedTimeRange, setSelectedTimeRange] = useState('Weekly');
+  const [selectedFish, setSelectedFish] = useState('Ikan Katombo Karisa (Grade A)');
+  const [selectedTimeRange, setSelectedTimeRange] = useState('Mingguan');
 
   return (
     <div className="p-4 bg-white rounded-xl shadow-lg">
-      <h2 className="text-3xl font-bold text-gray-800 mb-6">AI Fish Price Prediction</h2>
+      <h2 className="text-3xl font-bold text-gray-800 mb-6">Prediksi Harga Ikan Menggunakan AI</h2>
 
       <div className="flex flex-col md:flex-row md:space-x-4 mb-6">
         <div className="flex-1 mb-4 md:mb-0">
-          <label htmlFor="fishType" className="block text-sm font-medium text-gray-700 mb-2">Fish Type</label>
+          <label htmlFor="fishType" className="block text-sm font-medium text-gray-700 mb-2">Jenis Ikan</label>
           <select
             id="fishType"
             className="mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm rounded-md shadow-sm"
@@ -303,7 +303,7 @@ const PricePrediction = () => {
       </div>
 
       <div className="bg-gray-50 p-6 rounded-lg shadow-inner mb-6">
-        <h3 className="text-xl font-semibold text-gray-800 mb-4">Fish Price Prediction (per kg) - {selectedFish}</h3>
+        <h3 className="text-xl font-semibold text-gray-800 mb-4">Prediksi Harga Ikan (per kg) - {selectedFish}</h3>
         <ResponsiveContainer width="100%" height={300}>
           <LineChart data={[...historicalData, ...forecastedData]}>
             <CartesianGrid strokeDasharray="3 3" stroke="#e0e0e0" />
@@ -317,7 +317,7 @@ const PricePrediction = () => {
               data={historicalData}
               stroke="#4CAF50" // Green for historical
               strokeWidth={2}
-              name="Historical Price"
+              name="Harga Historis"
               dot={true}
               activeDot={{ r: 8 }}
             />
@@ -328,7 +328,7 @@ const PricePrediction = () => {
               stroke="#2196F3" // Blue for forecasted
               strokeWidth={2}
               strokeDasharray="5 5" // Dotted line
-              name="Forecasted Price"
+              name="Harga Perkiraan"
               dot={true}
               activeDot={{ r: 8 }}
             />
@@ -338,9 +338,9 @@ const PricePrediction = () => {
 
       {/* Summary Card */}
       <div className="bg-blue-500 text-white rounded-xl shadow-lg p-6 text-center">
-        <h3 className="text-2xl font-bold mb-2">Best Time to Sell:</h3>
-        <p className="text-4xl font-extrabold">Next Week!</p>
-        <p className="text-lg mt-2">Predicted increase of 5-7%</p>
+        <h3 className="text-2xl font-bold mb-2">Waktu Terbaik untuk Menjual:</h3>
+        <p className="text-4xl font-extrabold">Minggu Depan!</p>
+        <p className="text-lg mt-2">Peningkatan yang diperkirakan Sebesar 5-7%</p>
       </div>
     </div>
   );
@@ -350,7 +350,7 @@ const PricePrediction = () => {
 const FinbotChat = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState([
-    { sender: 'Finbot', text: 'Hello! I’m Finbot. How can I help you with financial inclusion or permits today?' },
+    { sender: 'Finbot', text: 'Halo! Saya Finbot. Bagaimana saya bisa membantu Anda hari ini?' },
   ]);
   const [inputValue, setInputValue] = useState('');
 
@@ -424,15 +424,15 @@ const FinbotChat = () => {
 const ProfileManagement = () => {
   const [isEditing, setIsEditing] = useState(false);
   const [profileData, setProfileData] = useState({
-    name: 'John Doe',
-    email: 'john.doe@example.com',
-    phone: '+62 812 3456 7890',
+    name: 'Gewinner vom westlichen Horizont',
+    email: 'gewinervom@gmail.com',
+    phone: '+62 822 7675 2388',
     address: 'Jl. Samudera No. 123, Kendari',
-    businessType: 'Capture Fisher',
-    mainProducts: 'Skipjack, Tuna, Sardine',
-    qrisTransactions: 'Rp 5,500,000 (Last Month)',
-    loanStatus: 'Approved (Rp 15,000,000)',
-    digitalAdoptionLevel: 'High',
+    businessType: 'Penangkap Ikan',
+    mainProducts: 'Ikan Katombo Karisa (Grade A), Ikan Boronang Besar (Grade A), Ikan Kalampute (Grade A)',
+    qrisTransactions: 'Rp 5,500,000 (Bulan Lalu)',
+    loanStatus: 'Disetujui (Rp 15,000,000)',
+    digitalAdoptionLevel: 'Tinggi',
   });
 
   const handleChange = (e) => {
@@ -448,11 +448,11 @@ const ProfileManagement = () => {
 
   return (
     <div className="p-4 bg-white rounded-xl shadow-lg">
-      <h2 className="text-3xl font-bold text-gray-800 mb-6">Fisher/UMKM Profile</h2>
+      <h2 className="text-3xl font-bold text-gray-800 mb-6"> Profil Nelayan - UMKM</h2>
 
       <div className="bg-gray-50 p-6 rounded-lg shadow-inner mb-6">
         <h3 className="text-xl font-bold text-gray-800 mb-4 flex items-center">
-          <User className="mr-2 text-blue-600" size={24} /> Contact Information
+          <User className="mr-2 text-blue-600" size={24} /> Infromasi Kontak
         </h3>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div className="flex flex-col">
@@ -516,7 +516,7 @@ const ProfileManagement = () => {
 
       <div className="bg-gray-50 p-6 rounded-lg shadow-inner mb-6">
         <h3 className="text-xl font-bold text-gray-800 mb-4 flex items-center">
-          <Fish className="mr-2 text-green-600" size={24} /> Business Details
+          <Fish className="mr-2 text-green-600" size={24} /> Rincian Bisnis
         </h3>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div className="flex flex-col">
@@ -528,7 +528,7 @@ const ProfileManagement = () => {
                 onChange={handleChange}
                 className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2"
               >
-                <option>Capture Fisher</option>
+                <option>Penangkap Ikan</option>
                 <option>Aquaculture</option>
                 <option>Processing</option>
                 <option>Trader</option>
@@ -556,11 +556,11 @@ const ProfileManagement = () => {
 
       <div className="bg-gray-50 p-6 rounded-lg shadow-inner mb-6">
         <h3 className="text-xl font-bold text-gray-800 mb-4 flex items-center">
-          <Banknote className="mr-2 text-purple-600" size={24} /> Financial Information
+          <Banknote className="mr-2 text-purple-600" size={24} /> Informasi Keuangan
         </h3>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div className="flex flex-col">
-            <label className="text-sm font-medium text-gray-700">QRIS Transaction History:</label>
+            <label className="text-sm font-medium text-gray-700">Riwayat Transaksi QRIS:</label>
             {isEditing ? (
               <input
                 type="text"
@@ -574,7 +574,7 @@ const ProfileManagement = () => {
             )}
           </div>
           <div className="flex flex-col">
-            <label className="text-sm font-medium text-gray-700">Loan Status:</label>
+            <label className="text-sm font-medium text-gray-700">Status Pinjaman:</label>
             {isEditing ? (
               <input
                 type="text"
@@ -635,23 +635,23 @@ const AdvancedAnalytics = () => {
   ];
 
   const buyerSegmentationData = [
-    { name: 'Local Markets', value: 400, color: '#0088FE' },
-    { name: 'Restaurants', value: 300, color: '#00C49F' },
-    { name: 'Processing Plants', value: 200, color: '#FFBB28' },
-    { name: 'Export', value: 100, color: '#FF8042' },
+    { name: 'Pasar Lokal', value: 400, color: '#0088FE' },
+    { name: 'Restoran', value: 300, color: '#00C49F' },
+    { name: 'Pabrik Pengolahan', value: 200, color: '#FFBB28' },
+    { name: 'Ekspor', value: 100, color: '#FF8042' },
   ];
 
   const marketingHeatmapData = [
-    { area: 'Kendari', sales: 500 },
-    { area: 'Bau-Bau', sales: 350 },
-    { area: 'Raha', sales: 280 },
-    { area: 'Kolaka', sales: 420 },
-    { area: 'Wakatobi', sales: 180 },
+    { area: 'Kota Kendari', sales: 500 },
+    { area: 'Kota Bau-Bau', sales: 350 },
+    { area: 'Kabupaten Raha', sales: 280 },
+    { area: 'Kabupaten Kolaka', sales: 420 },
+    { area: 'Kabupaten Wakatobi', sales: 180 },
   ];
 
   const COLORS = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042', '#8884d8', '#82ca9d'];
 
-  const fishTypes = ['All', 'Skipjack', 'Tuna', 'Mackerel'];
+  const fishTypes = ['All', 'Ikan Katombo Karisa (Grade A)', 'Ikan Boronang Besar (Grade A)', 'Ikan Rambeng Kecil (Grade A)'];
   const locations = ['All', 'Kendari', 'Bau-Bau', 'Raha'];
 
   const [selectedFishType, setSelectedFishType] = useState('All');
@@ -659,11 +659,11 @@ const AdvancedAnalytics = () => {
 
   return (
     <div className="p-4 bg-white rounded-xl shadow-lg">
-      <h2 className="text-3xl font-bold text-gray-800 mb-6">Advanced Analytics</h2>
+      <h2 className="text-3xl font-bold text-gray-800 mb-6">Analisis Lanjutan</h2>
 
       <div className="flex flex-col md:flex-row md:space-x-4 mb-6">
         <div className="flex-1 mb-4 md:mb-0">
-          <label htmlFor="analyticsFishType" className="block text-sm font-medium text-gray-700 mb-2">Fish Type</label>
+          <label htmlFor="analyticsFishType" className="block text-sm font-medium text-gray-700 mb-2">Jenis Ikan</label>
           <select
             id="analyticsFishType"
             className="mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm rounded-md shadow-sm"
@@ -676,7 +676,7 @@ const AdvancedAnalytics = () => {
           </select>
         </div>
         <div className="flex-1">
-          <label htmlFor="analyticsLocation" className="block text-sm font-medium text-gray-700 mb-2">Location</label>
+          <label htmlFor="analyticsLocation" className="block text-sm font-medium text-gray-700 mb-2">Lokasi</label>
           <select
             id="analyticsLocation"
             className="mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm rounded-md shadow-sm"
@@ -693,7 +693,7 @@ const AdvancedAnalytics = () => {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         {/* Monthly Fish Production Trends */}
         <div className="bg-gray-50 p-6 rounded-lg shadow-inner">
-          <h3 className="text-xl font-semibold text-gray-800 mb-4">Monthly Fish Production Trends (Tonnes)</h3>
+          <h3 className="text-xl font-semibold text-gray-800 mb-4">Tren Produksi Ikan Bulanan (Ton)</h3>
           <ResponsiveContainer width="100%" height={300}>
             <LineChart data={monthlyProductionData}>
               <CartesianGrid strokeDasharray="3 3" stroke="#e0e0e0" />
@@ -701,14 +701,14 @@ const AdvancedAnalytics = () => {
               <YAxis />
               <Tooltip />
               <Legend />
-              <Line type="monotone" dataKey="Production" stroke="#4CAF50" strokeWidth={2} activeDot={{ r: 8 }} />
+              <Line type="monotone" dataKey="Produksi" stroke="#4CAF50" strokeWidth={2} activeDot={{ r: 8 }} />
             </LineChart>
           </ResponsiveContainer>
         </div>
 
         {/* Buyer Segmentation Pie Chart */}
         <div className="bg-gray-50 p-6 rounded-lg shadow-inner">
-          <h3 className="text-xl font-semibold text-gray-800 mb-4">Buyer Segmentation</h3>
+          <h3 className="text-xl font-semibold text-gray-800 mb-4">Segmentasi Pembeli</h3>
           <ResponsiveContainer width="100%" height={300}>
             <PieChart>
               <Pie
@@ -733,7 +733,7 @@ const AdvancedAnalytics = () => {
 
         {/* Marketing Distribution Heatmap (Simulated with Bar Chart) */}
         <div className="bg-gray-50 p-6 rounded-lg shadow-inner lg:col-span-2">
-          <h3 className="text-xl font-semibold text-gray-800 mb-4">Marketing Distribution by Area (Sales in Kg)</h3>
+          <h3 className="text-xl font-semibold text-gray-800 mb-4">Distribusi Pemasaran Berdasarkan Wilayah (Penjualan dalam Kg)</h3>
           <ResponsiveContainer width="100%" height={300}>
             <BarChart data={marketingHeatmapData}>
               <CartesianGrid strokeDasharray="3 3" stroke="#e0e0e0" />
@@ -782,7 +782,7 @@ const DataInputForm = () => {
 
   return (
     <div className="p-4 bg-white rounded-xl shadow-lg max-w-lg mx-auto">
-      <h2 className="text-3xl font-bold text-gray-800 mb-6 text-center">Daily Catch / Sales Data Entry</h2>
+      <h2 className="text-3xl font-bold text-gray-800 mb-6 text-center">Data Penjualan Harian</h2>
 
       <form onSubmit={handleSubmit} className="space-y-6">
         <div>
@@ -802,7 +802,7 @@ const DataInputForm = () => {
         </div>
 
         <div>
-          <label htmlFor="fishType" className="block text-sm font-medium text-gray-700 mb-2">Fish Type</label>
+          <label htmlFor="fishType" className="block text-sm font-medium text-gray-700 mb-2">Jenis Ikan</label>
           <select
             id="fishType"
             name="fishType"
@@ -811,17 +811,17 @@ const DataInputForm = () => {
             className="mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm rounded-md shadow-sm"
             required
           >
-            <option value="">Select Fish Type</option>
-            <option value="Skipjack">Skipjack</option>
-            <option value="Tuna">Tuna</option>
-            <option value="Mackerel">Mackerel</option>
-            <option value="Snapper">Snapper</option>
-            <option value="Sardine">Sardine</option>
+            <option value="">Jenis Ikan</option>
+            <option value="Ikan Katombo Karisa (Grade A)">Ikan Katombo Karisa (Grade A)</option>
+            <option value="Ikan Boronang Besar (Grade A)">Ikan Boronang Besar (Grade A)</option>
+            <option value="Ikan Rambeng Kecil (Grade A)">Ikan Rambeng Kecil (Grade A)</option>
+            <option value="Ikan Malaja (Grade A)">Ikan Malaja (Grade A)</option>
+            <option value="Ikan Kalampute (Grade A)">Ikan Kalampute (Grade A)</option>
           </select>
         </div>
 
         <div>
-          <label htmlFor="quantity" className="block text-sm font-medium text-gray-700 mb-2">Quantity (kg)</label>
+          <label htmlFor="quantity" className="block text-sm font-medium text-gray-700 mb-2">Jumlah (kg)</label>
           <div className="relative">
             <input
               type="number"
@@ -840,7 +840,7 @@ const DataInputForm = () => {
         </div>
 
         <div>
-          <label htmlFor="pricePerKg" className="block text-sm font-medium text-gray-700 mb-2">Price per kg (IDR)</label>
+          <label htmlFor="pricePerKg" className="block text-sm font-medium text-gray-700 mb-2">Harga per Kilogram (IDR)</label>
           <div className="relative">
             <input
               type="number"
@@ -854,7 +854,9 @@ const DataInputForm = () => {
               className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm pl-8"
               required
             />
-            <DollarSignIcon className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" size={20} />
+            <span className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400">
+            Rp
+            </span>
           </div>
         </div>
 
@@ -868,7 +870,7 @@ const DataInputForm = () => {
             className="mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm rounded-md shadow-sm"
             required
           >
-            <option value="Cash">Cash</option>
+            <option value="Tunai">Tunai</option>
             <option value="QRIS">QRIS</option>
             <option value="Bank Transfer">Bank Transfer</option>
           </select>
@@ -878,7 +880,7 @@ const DataInputForm = () => {
           type="submit"
           className="w-full py-3 bg-blue-600 text-white font-semibold rounded-full shadow-lg hover:bg-blue-700 transition duration-300 transform hover:scale-105 flex items-center justify-center"
         >
-          <Save className="mr-2" size={20} /> Save Data
+          <Save className="mr-2" size={20} /> Simpan Data
         </button>
       </form>
     </div>
@@ -889,26 +891,26 @@ const DataInputForm = () => {
 const EducationResources = () => {
   const resources = [
     {
-      title: 'Digital Financial Literacy',
-      description: 'Learn about mobile banking, QRIS payments, and online financial management.',
+      title: 'Literasi Keuangan Digital',
+      description: 'Pelajari tentang perbankan mobile, pembayaran QRIS, dan pengelolaan keuangan online.',
       link: '#',
       icon: QrCode
     },
     {
-      title: 'Online Marketing Tips for Fishers',
-      description: 'Strategies to sell your catch online and reach a wider market.',
+      title: 'Tips Pemasaran Online untuk Nelayan',
+      description: 'Strategi untuk menjual hasil tangkapan Anda secara online dan menjangkau pasar yang lebih luas.',
       link: '#',
       icon: ExternalLink
     },
     {
-      title: 'Fisheries Business Permit Procedures',
-      description: 'A step-by-step guide to obtaining necessary permits and licenses.',
+      title: 'Prosedur Perizinan Usaha Perikanan',
+      description: 'Panduan langkah demi langkah untuk memperoleh izin dan lisensi yang diperlukan.',
       link: '#',
       icon: BookOpen
     },
     {
-      title: 'List of MSME Assistance Programs',
-      description: 'Discover government and non-government programs supporting micro, small, and medium enterprises.',
+      title: 'Daftar Program Bantuan untuk Usaha Mikro, Kecil, dan Menengah',
+      description: 'Temukan program-program pemerintah dan non-pemerintah yang mendukung usaha mikro, kecil, dan menengah.',
       link: '#',
       icon: Banknote
     },
@@ -916,7 +918,7 @@ const EducationResources = () => {
 
   return (
     <div className="p-4 bg-white rounded-xl shadow-lg">
-      <h2 className="text-3xl font-bold text-gray-800 mb-6">Education & Resources</h2>
+      <h2 className="text-3xl font-bold text-gray-800 mb-6">Pendidikan dan Sumber Daya</h2>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {resources.map((resource, index) => (
