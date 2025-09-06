@@ -2,10 +2,6 @@ Fisheries WebGIS-AI: Solusi Digital untuk UMKM Perikanan Provinsi Sulawesi Tengg
 
 WebGIS AI untuk memperkuat kinerja UMKM perikanan di Sulawesi Tenggara melalui akses pasar, inklusi keuangan, dan adopsi teknologi digital.
 
-[![Status](https://img.shields.io/badge/status-active-brightgreen.svg)](#)
-[![Tech](https://img.shields.io/badge/stack-React-FastAPI-PostGIS-GeoServer-blue.svg)](#)
-[![License](https://img.shields.io/badge/license-MIT-lightgrey.svg)](#)
-
 Tujuan Proyek
 Proyek ini menjawab tiga masalah utama UMKM perikanan di Sulawesi Tenggara:
 1) Asimetri informasi pasar(harga/permintaan tak merata),
