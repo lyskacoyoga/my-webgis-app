@@ -1,15 +1,49 @@
-# React + Vite
+Fisheries WebGIS-AI: Solusi Digital untuk UMKM Perikanan Provinsi Sulawesi Tenggara
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+WebGIS AI untuk memperkuat kinerja UMKM perikanan di Sulawesi Tenggara melalui akses pasar, inklusi keuangan, dan adopsi teknologi digital.
 
-Currently, two official plugins are available:
+[![Status](https://img.shields.io/badge/status-active-brightgreen.svg)](#)
+[![Tech](https://img.shields.io/badge/stack-React-FastAPI-PostGIS-GeoServer-blue.svg)](#)
+[![License](https://img.shields.io/badge/license-MIT-lightgrey.svg)](#)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Tujuan Proyek
+Proyek ini menjawab tiga masalah utama UMKM perikanan di Sulawesi Tenggara:
+1) Asimetri informasi pasar(harga/permintaan tak merata),
+2) Rendahnya inklusi keuangan (minim rekam jejak transaksi),
+3) Adopsi teknologi digital yang lambat (kurangnya panduan praktis).
 
-## Expanding the ESLint configuration
+Solusi: platform WebGIS-AI yang menggabungkan peta interaktif, analitik prediktif, transaksi digital, dan asisten virtual agar pelaku UMKM:
+- menemukan pasar terdekat/terbaik,
+- memantau dan memprediksi harga,
+- membangun rekam jejak keuangan (via QRIS),
+- belajar dan mengambil keputusan berbasis data.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-# my-webgis-app
-# lyskacoyoga
-# lyskacoyoga
+---
+
+Fitur Utama
+- Peta Interaktif 
+  Visualisasi lokasi nelayan, TPI, pelabuhan, pusat pengolahan, cold storage, rute distribusi, dan hotspot permintaan.
+- Analisis Prediktif AI 
+  Prediksi harga ikan menggunakan fitur cuaca (curah hujan, gelombang), pasokan historis, dan musim. Metrik evaluasi: MAE/RMSE/SMAPE.
+- Integrasi QRIS
+  Pencatatan transaksi digital untuk membangun rekam jejak keuangan UMKM (volume transaksi, frekuensi, AOV).
+- Chatbot Asisten Virtual  
+  Tanya-jawab literasi digital/keuangan, rekomendasi rute distribusi, dan tips kualitas pascapanen.
+
+Teknologi yang Digunakan
+Frontend
+- React (Vite/Next.js), Mapbox GL JS atau MapLibre GL JS, Tailwind CSS
+- State: React Query/Zustand; Charting: Recharts
+
+Backend
+- Python: FastAPI (alternatif: Django/Flask)
+- Database spasial: PostgreSQL + PostGIS
+- GeoServer untuk publikasi layer geospasial (WMS/WFS/WC*S)
+- Message/Task (opsional): Celery + Redis
+- Kontainerisasi & orkestrasi: Docker & docker-compose
+
+Prasyarat
+- Node.js ≥ 18, pnpm/yarn/npm
+- Python ≥ 3.10, pip/uv
+- Docker & docker-compose
+- Mapbox token (jika pakai Mapbox GL JS) atau gunakan MapLibre (tanpa token)
