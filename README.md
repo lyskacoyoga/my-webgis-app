@@ -14,8 +14,6 @@ Solusi: platform WebGIS-AI yang menggabungkan peta interaktif, analitik predikti
 - membangun rekam jejak keuangan (via QRIS),
 - belajar dan mengambil keputusan berbasis data.
 
----
-
 Fitur Utama
 - Peta Interaktif 
   Visualisasi lokasi nelayan, TPI, pelabuhan, pusat pengolahan, cold storage, rute distribusi, dan hotspot permintaan.
