@@ -29,7 +29,7 @@ Frontend
 - React (Vite/Next.js), Mapbox GL JS atau MapLibre GL JS, Tailwind CSS
 - State: React Query/Zustand; Charting: Recharts
 
-Backend
+Backend (Menyusul)
 - Python: FastAPI (alternatif: Django/Flask)
 - Database spasial: PostgreSQL + PostGIS
 - GeoServer untuk publikasi layer geospasial (WMS/WFS/WC*S)
